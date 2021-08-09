@@ -4,4 +4,8 @@ This is a pdf extract project to extract pdf highlight an comments in ibooks sty
 ### support feature  
 display add date,located page,located catalog,distinguish highlihgt and comments
 ### extract demo:  
-![image](https://user-images.githubusercontent.com/38215360/128656255-f545c648-1602-4be1-84ad-5dd415c2c797.png)
+![image](https://user-images.githubusercontent.com/38215360/128656255-f545c648-1602-4be1-84ad-5dd415c2c797.png)  
+### deficiencies:
+Not well supported math fonts and other Special characters.
+
+
