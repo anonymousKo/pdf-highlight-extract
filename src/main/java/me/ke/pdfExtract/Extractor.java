@@ -10,8 +10,8 @@ public class Extractor {
         // String parentPath = path.substring(0,path.lastIndexOf("\\"));
         try {
                 log.info("Current path :{}", path);
-                ExtractController extractController=new ExtractController();
-                extractController.ExtractPdfHighlight(path);
+                PdfController pdfController =new PdfController();
+                pdfController.extractPdfHighlight(path);
         } catch (Exception e) {
             log.error(String.valueOf(e));
         }

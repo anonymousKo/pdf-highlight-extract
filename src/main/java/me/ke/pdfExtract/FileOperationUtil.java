@@ -150,4 +150,21 @@ public class FileOperationUtil {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MMM dd, yyyy",Locale.ENGLISH);
         return simpleDateFormat.format(date);
     }
+
+    public void removeEncryption(File file) {
+        try {
+            PDDocument pdDocument = PDDocument.load(file);
+            if( pdDocument.isEncrypted() )
+            {
+                pdDocument.setAllSecurityToBeRemoved(true);
+                String saveFile = parseParentPath(file) + file.getName().replace(".pdf","_unlock.pdf");
+                pdDocument.save(saveFile);
+                log.info("save  the unlock file-> {}",saveFile);
+            }
+            pdDocument.close();
+        }catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
