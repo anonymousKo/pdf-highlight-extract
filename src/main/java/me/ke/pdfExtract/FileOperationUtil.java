@@ -46,7 +46,7 @@ public class FileOperationUtil {
 
     public void extractHighlight(File file)  {
         String documentName;
-        StringBuilder wholeText = new StringBuilder("+++\n");
+        StringBuilder wholeText = new StringBuilder("***\n");
         Map<Integer,String > indexToBookmarkMap = new LinkedHashMap<>();
         boolean hasAnnotation = false;
         try {
@@ -87,7 +87,7 @@ public class FileOperationUtil {
 
                         String exportIndex = "<div style=\"float:left\">" + pageNum +" " + bookmarkName + "</div>" +
                                 "<div style=\"float:right\">"+ formattedDate + "</div>";
-                        wholeText.append(exportIndex).append("\n").append("> ").append(highAndComment).append("+++").append("\n");
+                        wholeText.append(exportIndex).append("\n").append("\n> ").append(highAndComment).append("\n").append("***").append("\n");
                     }
                 }
             }
